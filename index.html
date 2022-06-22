@@ -4,52 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap import CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- My Style -->
     <link rel="stylesheet" href="./CSS/style.css">
     <title>Biglietti Treno</title>
 </head>
 <body>
    <main>
-    <div>
-        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-                <div >
-                    <span>Nome e Cognome</span>
-                    <input type="text" id="user-name" placeholder="Inserisci Nome e Cognome">
+    <div class="mt-5">
+        <h1 class="text-light text-center fw-bolder mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="container">
+            <div id="input-card" class="row rounded-4 p-3 border border-secondary bg-white">
+                <div class="col-4 p-2 d-flex flex-column align-items-center mt-3">
+                    <span class="text-center d-block color-b91450 mb-2">Nome e Cognome</span>
+                    <input class="box-txt rounded" type="text" id="user-name" placeholder="Nome e Cognome">
                 </div>
-                <div>
-                    <span>Km da percorrere</span>
-                    <input class="ms_input-box" type="number" id="user-km" placeholder="Inserisci i KM da percorrere">
+                <div class="col-4 p-2 d-flex flex-column align-items-center mt-3">
+                    <span class="text-center d-block color-b91450 mb-2">Km da percorrere</span>
+                    <input class="box-txt rounded" type="number" id="user-km" placeholder="KM da percorrere">
                 </div>
-                <div>
-                    <span>Età del passeggero</span>
-                    <input class="ms_input-box" type="number" id="user-age" placeholder="Inserisci la tua età">
+                <div class="col-4 p-2 d-flex flex-column align-items-center mt-3">
+                    <span class="text-center d-block color-b91450 mb-2">Età del passeggero</span>
+                    <input class="box-txt rounded" type="number" id="user-age" placeholder="la tua età">
                 </div>
-                <div>
-                    <a href="#" id="send-btn">Invia</a>
-                    <a href="#" id="clear-btn">Annulla</a>
+                <div class="col-4 offset-4 text-center p-4 mt-5">
+                    <a href="#" class="generic-btn rounded-4 mx-3" id="send-btn">Invia</a>
+                    <a href="#" class="generic-btn rounded-4 mx-3" id="clear-btn">Annulla</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <div>
-        <h2>IL TUO BIGLIETTO</h2>
-            <div id="ticket-card">
-                <h4>DETTAGLI PASSEGGERO</h4>
-                <div>
-                    <h5 >NOME PASSEGGERO</h5>
-                    <p id="show-name"></p>
+    <div class="mt-5">
+        <h1 class="text-light text-center fw-bolder mb-4">IL TUO BIGLIETTO</h1>
+        <div class="container">
+            <div id="ticket-card" class="row rounded-4 p-3 border border-secondary bg-white">
+                <h4 class="fw-bold">DETTAGLI PASSEGGERO</h4>
+                <div class="col-4 flex-column bg-secondary border-top border-bottom border-start border-dark">
+                    <h5 class="fw-bold px-3 pt-2">NOME PASSEGGERO</h5>
+                    <pre class="fs-5 px-3 fw-bold" id="show-name"></pre>
                 </div>
-                <div >
-                    <h6 class="fw-bold">Offerta</h6>
-                    <p id="rate"></p>
-                    <h6 class="fw-bold">Costo Biglietto</h6>
-                    <p id="price"></p>
+                <div class="col-8 flex-column border-top border-bottom border-dark">
+                    <div class="row">
+                        <div class="col-3 mt-2">
+                            <h6 class="fw-bold">Offerta</h6>
+                            <pre class="fs-5 mt-5" id="rate"></pre>
+                        </div>
+                        <div class="col-3 mt-2">
+                            <h6 class="fw-bold">Carrozza</h6>
+                            <pre class="fs-5 mt-5" id="train-carriage"></pre>
+                        </div>
+                        <div class="col-3 mt-2">
+                            <h6 class="fw-bold">Codice CP</h6>
+                            <pre class="fs-5 mt-5" id="cp-code"></pre>
+                        </div>
+                        <div class="col-3 mt-2">
+                            <h6 class="fw-bold">Costo Biglietto</h6>
+                            <pre class="fs-5 mt-5" id="price"></pre>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
     </div>
    </main>
-   <script src="./js/script.js"></script> 
+   <script src="./JS/script.js"></script> 
 </body>
 </html> 

@@ -38,7 +38,10 @@ if (userAge < 18) {
 
 document.getElementById ('show-name').innerHTML = userName;
 document.getElementById ('rate').innerHTML = message;
+document.getElementById ('train-carriage').innerHTML = Math.floor(Math.random() *10 + 1);
+document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 90000 + 10000);
 finalPrice.innerHTML = totalPrice.toFixed(2) + "€";
+
 })
 clearBtn.addEventListener ('click', function(){
 document.getElementById('user-name').value = "";

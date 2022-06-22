@@ -1,0 +1,18 @@
+.color-b91450{color: #b91450;}
+.bg-b91450{background-color:#b91450;}
+body{
+    background-color:#b91450;
+}
+.generic-btn {
+    color: #b91450;
+    background-color: #cccccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 3px solid transparent; 
+}
+
+.box-txt {
+    border: 2px solid #b92714;
+    width: 160px;
+}
