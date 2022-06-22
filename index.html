@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Biglietti Treno</title>
+</head>
+<body>
+   <main>
+    <div id="input-wrapper">
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+                <div >
+                    <span>Nome e Cognome</span>
+                    <input type="text" id="user-name" placeholder="Inserisci Nome e Cognome">
+                </div>
+                <div>
+                    <span>Km da percorrere</span>
+                    <input class="ms_input-box" type="number" id="user-km" placeholder="Inserisci i KM da percorrere">
+                </div>
+                <div>
+                    <span>Età del passeggero</span>
+                    <input class="ms_input-box" type="number" id="user-age" placeholder="Inserisci la tua età">
+                </div>
+                <div>
+                    <a href="#" id="send-btn">Invia</a>
+                    <a href="#" id="clear-btn">Annulla</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="output-wrapper">
+        <h2>IL TUO BIGLIETTO</h2>
+            <div id="ticket-card">
+                <h4>DETTAGLI PASSEGGERO</h4>
+                <div>
+                    <h5 >NOME PASSEGGERO</h5>
+                    <p id="show-name"></p>
+                </div>
+                <div >
+                    <h6 class="fw-bold">Offerta</h6>
+                    <p id="rate"></p>
+                    <h6 class="fw-bold">Costo Biglietto</h6>
+                    <p id="price"></p>
+                </div>
+            </div>
+    </div>
+   </main>
+   <script src="./js/script.js"></script> 
+</body>
+</html> 
