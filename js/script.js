@@ -16,10 +16,16 @@ const finalPrice = document.querySelector('#price');
 sendBtn.addEventListener ('click', function(){
     const userName = document.getElementById('user-name').value;
     //km
-let kmPrice = 0.21;
+    let kmPrice = 0.21;
+const ticketSection = document.getElementById('ticket-section')
 const userKm = parseInt(document.getElementById ('user-km').value);
 const userAge = parseInt(document.getElementById ('user-age').value);
-    //prezzo base
+//validation
+if(!userName.trim() || isNaN(userKm) || userKm < 1){
+    alert('Hai inserito valori non validi!');
+    return;
+}
+//prezzo base
 let basePrice = userKm * kmPrice;
 let totalPrice = basePrice;
 let message = "Tariffa Base";
@@ -35,18 +41,20 @@ if (userAge < 18) {
     message = "Tariffa Over65";
     console.log (totalPrice + "€");
 } 
-
 document.getElementById ('show-name').innerHTML = userName;
 document.getElementById ('rate').innerHTML = message;
 document.getElementById ('train-carriage').innerHTML = Math.floor(Math.random() *10 + 1);
 document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 90000 + 10000);
 finalPrice.innerHTML = totalPrice.toFixed(2) + "€";
+ticketSection.classList.remove('d-none')
 
 })
+
 clearBtn.addEventListener ('click', function(){
 document.getElementById('user-name').value = "";
 document.getElementById('user-km').value = "";
 document.getElementById('user-age').value = "";
+
 })
 
 
